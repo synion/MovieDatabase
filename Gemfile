@@ -18,6 +18,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -29,6 +31,8 @@ end
 
 group :test do
   gem 'shoulda-matchers', require: false
+  gem 'capybara'
+  gem 'rails-controller-testing'
 end
 
 
