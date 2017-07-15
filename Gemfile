@@ -17,6 +17,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'decent_exposure'
 gem 'haml', '~> 5.0', '>= 5.0.1'
+gem 'draper'
 
 group :development, :test do
   gem 'byebug', platform: :mri
