@@ -10,6 +10,7 @@ RSpec.describe Movie, type: :model do
     it { should have_db_column :revenue }
   end
   describe 'associations' do
-    it { is_expected.to have_one :genre }
+    it { is_expected.to belong_to :genre }
+    it { is_expected.to have_many :actors }
   end
 end
