@@ -10,6 +10,6 @@ RSpec.describe Actor, type: :model do
     it { should have_db_column :last_name }
   end
   describe 'associations' do
-    it { is_expected.to have_many :movies }
+    it { is_expected.to have_and_belong_to_many :movies }
   end
 end

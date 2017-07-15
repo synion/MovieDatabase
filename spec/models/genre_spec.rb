@@ -9,7 +9,6 @@ RSpec.describe Genre, type: :model do
     it { should have_db_column :name }
   end
   describe 'associations' do
-    it { is_expected.to have_and_belong_to_many  :movies }
-    it { is_expected.to belong_to :actors }
+    it { is_expected.to have_many  :movies }
   end
 end

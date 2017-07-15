@@ -11,6 +11,6 @@ RSpec.describe Movie, type: :model do
   end
   describe 'associations' do
     it { is_expected.to belong_to :genre }
-    it { is_expected.to have_many :actors }
+    it { is_expected.to have_and_belong_to_many :actors }
   end
 end
