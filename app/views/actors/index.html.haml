@@ -3,10 +3,10 @@
     %table.table.table-sm.table-inverse
       %thead
         %tr
-          %th First Name
-          %th Last Name
+          %th= actor.decorate.full_name
       %tbody
         %tr
-          %td= actor.first_name
-          %td= actor.last_name
+          -actor.decorate.three_movies.each do |movie|
+            %td= movie.name
+
 
