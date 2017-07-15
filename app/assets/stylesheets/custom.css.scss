@@ -1,6 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 .actors {
   text-color: black;
+}
+
+.index-button {
+  float: right;
+}
+span.checkbox {
+  display: inline-block;
+  margin-right: 10px
+}
+
+.check_boxes {
+  display: block;
+  text-align: left;
 }

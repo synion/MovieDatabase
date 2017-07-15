@@ -1,0 +1,13 @@
+%table.table.table-condensed
+  %tbody
+    %tr
+      %td= actor.first_name
+    %tr
+      %td= actor.last_name
+%table.table.table-condensed
+  %tbody
+    -actor.movies.each do |movie|
+      %tr
+        %td=link_to "#{movie.name}", movie_path(movie)
+        %td= "#{movie.genre.name}"
+= link_to t('shared.back'), actors_path, class: 'btn btn-default'
