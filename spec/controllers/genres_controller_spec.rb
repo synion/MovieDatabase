@@ -9,7 +9,7 @@ RSpec.describe GenresController, type: :controller do
 
   describe 'GET #edit' do
     let(:genre) { create :genre }
-    subject { get :edit, id: genre.id }
+    subject { get :edit, params: { id: 1 } }
 
     it_behaves_like 'template rendering action', :edit
   end
@@ -22,7 +22,7 @@ RSpec.describe GenresController, type: :controller do
 
   describe 'GET #show' do
     let(:genre) { create :genre }
-    subject { get :show, id: genre.id }
+    subject { get :show, params: { id: 1 } }
 
     it_behaves_like 'template rendering action', :show
   end

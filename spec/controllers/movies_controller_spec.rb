@@ -9,7 +9,7 @@ RSpec.describe MoviesController, type: :controller do
 
   describe 'GET #edit' do
     let(:movie) { create :movie }
-    subject { get :edit, id: movie.id }
+    subject { get :edit, params: { id: 1 } }
 
     it_behaves_like 'template rendering action', :edit
   end
@@ -22,7 +22,7 @@ RSpec.describe MoviesController, type: :controller do
 
   describe 'GET #show' do
     let(:movie) { create :movie }
-    subject { get :show, id: movie.id }
+    subject { get :show, params: { id: 1 } }
 
     it_behaves_like 'template rendering action', :show
   end
