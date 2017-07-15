@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :actor do
+  factory :genre do
     name { Faker::Name.name }
   end
 end
