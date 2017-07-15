@@ -1,0 +1,19 @@
+%nav.navbar-default.navbar-top
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"aria-controls" => "navbar", "aria-expanded" => "true", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "MovieDatabase", root_path, class: 'navbar-brand'
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li.dropdown
+          = link_to '#', class: 'dropdown-toggle', 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown', role: 'button' do
+            = t('navbar.Actors')
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              = link_to t('navbar.Actors'), actors_path
+

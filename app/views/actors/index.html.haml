@@ -1,0 +1,12 @@
+.actors
+  -actors.each do |actor|
+    %table.table.table-sm.table-inverse
+      %thead
+        %tr
+          %th First Name
+          %th Last Name
+      %tbody
+        %tr
+          %td= actor.first_name
+          %td= actor.last_name
+
