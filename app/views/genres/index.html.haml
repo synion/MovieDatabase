@@ -1,0 +1,12 @@
+-genres.each do |genre|
+  %table.table.table-sm.table-inverse
+    %thead
+      %tr
+        %td
+          =link_to "#{genre.name}", genre_path(genre)
+          = link_to edit_genre_path(genre), { title: t('shared.edit') } do
+            %button.btn.btn-default.index-button
+              = fa_icon "edit"
+          = link_to genre_path(genre), { method: :delete, data: { :confirm => 'Are you sure?' },  title: t('shared.delete') } do
+            %button.btn.btn-default.index-button
+              = fa_icon "times"

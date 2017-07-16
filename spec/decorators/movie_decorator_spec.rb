@@ -6,7 +6,7 @@ RSpec.describe MovieDecorator do
 
   describe "#expose_revenue" do
     subject { movie.decorate.expose_revenue }
-    it { is_expected.to eq '1000M Dollars' }
+    it { is_expected.to eq '1000 M Dollars' }
   end
 
 end

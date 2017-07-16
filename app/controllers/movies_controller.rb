@@ -5,29 +5,9 @@ class MoviesController < ApplicationController
   expose :actors,  ->{ Actor.all }
   expose :genre,   ->{ Genre.all }
 
-  def create
-    if movie.save
-      redirect_to movie_path(movie)
-      flash[:success]= "Create Movie complited"
-    else
-      render 'new'
-    end
-  end
-
-  def update
-    if movie.save
-      redirect_to movie_path(movie)
-      flash[:success]= "Update complited"
-    else
-      render 'edit'
-    end
-  end
-
-  def destroy
-    movie.destroy
-    redirect_to movie_path
-    flash[:danger] = "Movie was deleted"
-  end
+  def create(movie)  end;
+  def update(movie)  end;
+  def destroy(movie) end;
 
   private
   def movie_params
