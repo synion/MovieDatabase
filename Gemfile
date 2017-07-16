@@ -21,6 +21,8 @@ gem 'draper'
 gem 'simple_form'
 gem "font-awesome-rails"
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'byebug', platform: :mri

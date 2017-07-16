@@ -1,11 +1,19 @@
 =render 'title_search_box'
+= will_paginate actors
 .index
+%table.table.table-sm.table-inverse
+  %thead
+    %tr
+      %th= sort_link search, :first_name
+      %th= sort_link search, :last_name
+      %th= sort_link search, :movies
+  %hr
   -actors.each do |actor|
     %table.table.table-sm.table-inverse
       %thead
         %tr
-          %th=link_to "#{actor.decorate.full_name}", actor_path(actor)
           %th
+            = link_to "#{actor.decorate.full_name}", actor_path(actor) |
           %th
           %th
             = link_to edit_actor_path(actor), { title: t('shared.edit') } do
@@ -19,4 +27,6 @@
           -actor.decorate.three_movies.each do |movie|
             %td.links=link_to movie.name, movie_path(movie)
           %td.last-td= link_to "All Movies", movies_path
+
+= will_paginate actors
 
