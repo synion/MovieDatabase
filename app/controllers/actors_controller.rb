@@ -4,9 +4,29 @@ class ActorsController < ApplicationController
   expose(:actor, attributes: :actor_params)
   expose :movies,  ->{ Movie.all }
 
-  def create(actor)  end;
-  def update(actor)  end;
-  def destroy(actor) end;
+  def create
+    if actor.save
+      flash[:success]= "Create Actor complited"
+      redirect_to actor_path(actor)
+    else
+      render 'new'
+    end
+  end
+
+  def update
+    if actor.update(actor_params)
+      redirect_to actor_path(actor)
+      flash[:success]= "Update complited"
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    actor.destroy
+    redirect_to actors_path
+    flash[:danger] = "Actor was deleted"
+  end
 
   private
   def actor_params
