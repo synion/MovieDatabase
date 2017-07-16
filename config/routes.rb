@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   resources :actors
   resources :movies
   resources :genres
+
+  get 'stats_page/index', as: 'stats_page'
   root 'actors#index'
 end

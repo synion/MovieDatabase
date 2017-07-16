@@ -7,4 +7,8 @@ class Actor < ApplicationRecord
    def to_s
     self.decorate.full_name
    end
+
+   def self.most_played
+    self.all.max_by { |actor| actor.movies.size }
+   end
 end

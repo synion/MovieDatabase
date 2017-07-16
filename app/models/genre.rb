@@ -5,4 +5,8 @@ class Genre < ApplicationRecord
   def to_s
     self.name
   end
+
+  def self.most_popular
+    self.all.max_by { |genre| genre.movies.size }
+  end
 end
