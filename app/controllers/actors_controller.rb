@@ -1,8 +1,11 @@
 class ActorsController < ApplicationController
-  expose :actors,  ->{ Actor.all }
+  expose :actors,  ->{ search.result.paginate(page: params[:page], per_page: 20) }
   expose :actor
   expose(:actor, attributes: :actor_params)
   expose :movies,  ->{ Movie.all }
+  expose :search,  ->{ Actor.search(params[:q]) }
+  expose :sort,    ->{ search.sort = 'first_name asc' if @search.sorts.empty?}
+
 
   def create
     if actor.save

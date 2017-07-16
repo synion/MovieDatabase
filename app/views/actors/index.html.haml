@@ -1,10 +1,13 @@
-.actors
+=render 'title_search_box'
+.index
   -actors.each do |actor|
     %table.table.table-sm.table-inverse
       %thead
         %tr
-          %td
-            =link_to "#{actor.decorate.full_name}", actor_path(actor)
+          %th=link_to "#{actor.decorate.full_name}", actor_path(actor)
+          %th
+          %th
+          %th
             = link_to edit_actor_path(actor), { title: t('shared.edit') } do
               %button.btn.btn-default.index-button
                 = fa_icon "edit"
@@ -14,6 +17,6 @@
       %tbody
         %tr
           -actor.decorate.three_movies.each do |movie|
-            %td=link_to movie.name
-
+            %td.links=link_to movie.name, movie_path(movie)
+          %td.last-td= link_to "All Movies", movies_path
 

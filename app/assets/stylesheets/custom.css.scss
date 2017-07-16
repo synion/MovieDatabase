@@ -2,8 +2,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.actors {
-  text-color: black;
+.index {
+  margin-top: 10%;
 }
 
 .index-button {
@@ -22,4 +22,34 @@ span.checkbox {
 .card-head-top {
   height: 30vh;
   background-color: #757575;
+}
+
+.search {
+ float: right;
+}
+td.last-td {
+  display: inline-block;
+  text-align: right;
+}
+
+td {
+  white-space:nowrap;
+}
+
+td.links {
+  a {
+    color: #0090B2;
+    &:hover {
+      color: #FF7A00;
+    }
+    &:active {
+      color: #B25500;
+    }
+    &:link {
+      color: #FF7A00;
+    }
+    &:visited {
+      color: #B25500;
+    }
+  }
 }

@@ -1,0 +1,7 @@
+-content_for :search do
+  .search
+    .row
+      .col-2
+        = search_form_for(search, html: { class: 'navbar-form', role: 'search' }) do |f|
+          = f.text_field :first_name_or_last_name_cont, class: "form-control", placeholder: "Find Actor"
+          = f.submit "Search", class: "btn btn-default"

@@ -20,6 +20,7 @@ gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'draper'
 gem 'simple_form'
 gem "font-awesome-rails"
+gem 'ransack', github: 'activerecord-hackery/ransack'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -13,6 +13,7 @@
       = render 'layouts/messages'
     %main{:role => "main"}
       .container
+        = yield(:search)
         .row
           .col-xs-10.col-xs-offset-1
             = yield
