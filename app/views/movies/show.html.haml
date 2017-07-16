@@ -1,0 +1,11 @@
+.card
+  .card-head-top
+    %h1.center-block{ align: "center" }=movie.name
+  .card-block
+    %p.card-text "Some quick example text to build on the card title and make up the bulk of the card's conten"
+    %p.card-text="Erned: #{movie.decorate.expose_revenue}"
+    %p.card-text Actors Played in :
+    - movie.actors.each do |actor|
+      %tbody
+        %tr
+          %td.cart-text= actor.decorate.full_name

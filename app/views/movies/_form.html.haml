@@ -1,0 +1,7 @@
+= simple_form_for(movie, html: { class: 'form-horizontal' }) do |f|
+  = f.input :name
+  = f.input :revenue, as: :integer
+  = f.association :actors, value_method: :id, label: 'Actors',collection: actors, as: :check_boxes, class: 'check'
+  = f.input :genre_id, label: 'Genre',collection: genre, as: :radio_buttons
+  = link_to t('shared.back'), movies_path, class: 'btn btn-default'
+  = f.button :submit
