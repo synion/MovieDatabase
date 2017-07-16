@@ -10,7 +10,7 @@ RSpec.describe GenreDecorator do
 
   describe "#number_of_movie" do
     subject { genre.decorate.number_of_movie }
-    it { is_expected.to eq 4 }
+    it { is_expected.to eq "Number of movies: 4" }
   end
 
 end

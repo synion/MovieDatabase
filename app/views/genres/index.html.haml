@@ -3,7 +3,10 @@
     %thead
       %tr
         %td
-          =link_to "#{genre.name}", genre_path(genre)
+          = link_to "#{genre.name}", genre_path(genre)
+      %tr
+        %td
+          = genre.decorate.number_of_movie
           = link_to edit_genre_path(genre), { title: t('shared.edit') } do
             %button.btn.btn-default.index-button
               = fa_icon "edit"

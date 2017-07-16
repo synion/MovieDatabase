@@ -25,3 +25,12 @@
             %li
               = link_to t('navbar.Movies'), movies_path
               = link_to t('navbar.New'), new_movie_path
+        %li.dropdown
+          = link_to '#', class: 'dropdown-toggle', 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown', role: 'button' do
+            = t('navbar.Genre')
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              = link_to t('navbar.Genres'), genres_path
+              = link_to t('navbar.New'), new_genre_path
+
