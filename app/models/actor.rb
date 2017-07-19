@@ -9,6 +9,14 @@ class Actor < ApplicationRecord
    end
 
    def self.most_played
-    self.all.max_by { |actor| actor.movies.size }
+      self.find(most_played_id)
+   end
+
+   private
+   def self.most_played_id
+    self.joins(:movies).
+         group(:id).
+         count(:id).
+         max_by {|id,movies| movies}[0]
    end
 end

@@ -2,8 +2,8 @@
   %table.table.table-sm.table-inverse
     %thead
       %tr
-        %td
-          =link_to "#{movie.name}", movie_path(movie)
+        %th=link_to "#{movie.name}", movie_path(movie)
+        %th
           = link_to edit_movie_path(movie), { title: t('shared.edit') } do
             %button.btn.btn-default.index-button
               = fa_icon "edit"

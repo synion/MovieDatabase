@@ -7,6 +7,14 @@ class Genre < ApplicationRecord
   end
 
   def self.most_popular
-    self.all.max_by { |genre| genre.movies.size }
+    self.find(most_popular_id)
+  end
+
+  private
+  def self.most_popular_id
+    self.joins(:movies).
+         group(:id).
+         count.
+         max_by { |genre_id,numbers| numbers}[0]
   end
 end
